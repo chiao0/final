@@ -9,25 +9,37 @@ body {
 
 header {
     background-color: #E7D1C9;
-    color: white;
-    text-align: center;
     padding: 20px;
-    margin: 0px;
+    margin: 0;
+    text-align: right;
+    /* 內容右對齊 */
 }
 
-nav {
+/* 假設你有一個圖標元素，例如一個 <img> 元素 */
+header img {
 
-    font-family: Arial;
+    max-width: 100px;
+    max-height: 50px;
+    margin-right: 10px;
+    /* 調整右邊邊距，讓圖標與內容有一些間隔 */
+}
+
+
+nav {
     text-align: center;
+    font-family: Arial;
+    color: rgba(12, 10, 10, 0.267);
+
 }
 
 nav a {
     padding: 14px 16px;
     display: inline-block;
+
 }
 
 nav a:hover {
-    background-color: #cda8b8;
+    background-color: #E7D1C9;
     color: white;
 }
 
@@ -44,4 +56,37 @@ article {
     width: 75%;
     background-color: white;
     padding: 30px 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 50px;
+    font-family: 標楷體;
+}
+
+
+
+.hot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    /* 設定子元素之間的空間 */
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 30px;
+    /* 在每個圖片的左右各添加 15 像素的邊距 */
 }
