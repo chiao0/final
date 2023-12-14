@@ -12,16 +12,16 @@ header {
     padding: 20px;
     margin: 0;
     text-align: right;
-    /* 內容右對齊 */
+
 }
 
-/* 假設你有一個圖標元素，例如一個 <img> 元素 */
+
 header img {
 
     max-width: 100px;
     max-height: 50px;
     margin-right: 10px;
-    /* 調整右邊邊距，讓圖標與內容有一些間隔 */
+
 }
 
 
@@ -81,12 +81,11 @@ section {
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    /* 設定子元素之間的空間 */
 }
 
 section img {
     max-width: 100%;
     height: auto;
     margin: 0 30px;
-    /* 在每個圖片的左右各添加 15 像素的邊距 */
+
 }
