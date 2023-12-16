@@ -5,8 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./goods.css">
+
 </head>
 <body>
-    1
+    <header>
+        
+        <a href="#">
+            <img src="./assets/image/search.png" width="30px" height="30px"/>
+        </a>
+        <a href="#">
+            <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+        </a>
+
+        <a href="#">
+            <img src="./assets/image/member.png" width="30px" height="30px"/>
+        </a>
+        
+        
+    </header>
+    
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="aboutus.html">關於我們</a>
+        <a href="goods.html">商品</a>
+        
+        
+    </nav>
+
+    <div class="card">
+        <img src="./assets/image/table.jpg" class="productphoto">
+        
+        <div class="text">
+            <h1>桌子</h1><br>
+            售價<br>
+            1000<br>
+            商品庫存：10<br>
+        </div>
+
+        <div class="item1">
+            <input type="button" value="-" class="item_button" onclick="minus(0)">
+            <input type="text" value="1" class="item_num">
+            <input type="button" value="+"class="item_button" onclick="add(0)">
+        </div>
+        
+        <script>
+            function minus(num) {
+                var number = Number(document.getElementsByClassName("item_num")[num].value);
+                if (number > 1) {
+                    number -= 1;
+                    document.getElementsByClassName("item_num")[num].value = number;
+                }else window.alert("商品數量不得少於1");
+            }
+            function add(num) {
+                var number = Number(document.getElementsByClassName("item_num")[num].value);
+                if (number < 100) {
+                    number += 1;
+                    document.getElementsByClassName("item_num")[num].value = number;
+                }else window.alert("商品數量不得超過100");
+            }
+        </script>
+        
+        <div class="shoppingcart">
+            <button class="addbutton">加入購物車</button>
+        </div>
+        
+    </div>
+    
+
+    <hr align="center" width="1300px">
+    <div class="introduce">
+        <h3>商品介紹<h3><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor libero excepturi nemo commodi unde? Facilis, laborum aliquid ullam necessitatibus laboriosam porro! Repellat exercitationem nihil eligendi eius quae obcaecati error accusantium.</p>
+    </div>
+    <hr align="center" width="1300px">
+    商品評論
+    使用者姓名
+    星等
+
+    <footer>
+        瀏覽人數
+        <h5>Copyrgiht @ 2023 All rights reserved</h5>
+    </footer>
 </body>
 </html>

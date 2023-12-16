@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff1e6;
+    margin: 0px;
+}
+
+header {
+    background-color: #E7D1C9;
+    padding: 20px;
+    margin: 0;
+    text-align: right;
+
+}
+
+
+header img {
+
+    max-width: 100px;
+    max-height: 50px;
+    margin-right: 10px;
+
+}
+
+
+nav {
+    text-align: center;
+    font-family: Arial;
+    color: rgba(12, 10, 10, 0.267);
+
+}
+
+nav a {
+    padding: 14px 16px;
+    display: inline-block;
+
+}
+
+nav a:hover {
+    background-color: #E7D1C9;
+    color: white;
+}
+
+img {
+    margin-right: 50px;
+    border-radius: 10px;
+
+
+}
+
+.productphoto {
+    height: 450px;
+    width: 450px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 315px;
+    margin-right: 310px;
+    background-color: rgb(245, 226, 207);
+    width: 900px;
+    height: 450px;
+
+
+}
+
+
+
+
+.addbutton {
+    background-color: #c99383;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 350px;
+    right: 150px;
+    white-space: nowrap;
+
+
+}
+
+
+.addbutton:hover {
+    background-color: #da976e;
+    cursor: pointer;
+}
+
+.item_button {
+    cursor: pointer;
+
+}
+
+.item1 {
+    margin-top: 200px;
+
+
+}
+
+.item_num {
+    width: 110px;
+    text-align: center;
+
+}
+
+.introduce {
+    text-align: center;
+    width: 1000;
+}
+
+footer {
+    background-color: #EEDDD3;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+}
