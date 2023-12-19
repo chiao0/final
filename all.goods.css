@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0px auto;
+}
+
+body {
+    background-color: #fdecef;
+    margin: 0px;
+}
+
+header {
+    background-color: #E7D1C9;
+    padding: 20px;
+    margin: 0;
+    text-align: right;
+
+}
+
+header img {
+
+    max-width: 100px;
+    max-height: 50px;
+    margin-right: 10px;
+
+}
+
+nav {
+    text-align: center;
+    font-family: Arial;
+    color: rgba(12, 10, 10, 0.267);
+
+}
+
+nav a {
+    padding: 14px 16px;
+    display: inline-block;
+
+}
+
+nav a:hover {
+    background-color: #E7D1C9;
+    color: white;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #EEDDD3;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack the elements vertically */
+    align-items: center;
+    /* Center the elements horizontally */
+}
+
+.ad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    /* Adjust as needed to add space between .ad and .card */
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* Add other card container styles as needed */
+}
+
+.card {
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url(image/card_img.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+
+main {
+    padding: 20px;
+    display: grid;
+    width: 100%;
+    /* 4xN grid */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Update this line for a 4-column layout */
+    grid-gap: 5px;
+}
+
+main aside {
+    grid-area: 1/1/2/3;
+    /* 第一行 */
+}
+
+main aside:nth-child(2) {
+    grid-area: 3/1/4/3;
+    /* 第三行 */
+}

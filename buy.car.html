@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" href="buy.car.css">
+
+</head>
+<body>
+    <header>
+        
+        <a href="#">
+            <img src="./assets/image/search.png" width="30px" height="30px"/>
+        </a>
+        <a href="buy.car.html">
+            <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+        </a>
+
+        <a href="#">
+            <img src="./assets/image/member.png" width="30px" height="30px"/>
+        </a>
+        
+        
+    </header>
+    
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="aboutus.html">關於我們</a>
+        <a href="all.goods.html">商品總覽</a>
+    </nav>
+
+    <div class="card">
+        <img src="./assets/image/table.jpg" alt="Table" class="productphoto">
+        <div class="text">
+            <h1>桌子</h1>
+            <p>售價: 1000</p>
+            <p>商品庫存: 10</p>
+        </div>
+        <div class="item1">
+            <input type="button" value="-" class="item_button" onclick="minus(0)">
+            <input type="text" value="1" class="item_num">
+            <input type="button" value="+" class="item_button" onclick="add(0)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        
+        <script>
+            function minus(num) {
+                var number = Number(document.getElementsByClassName("item_num")[num].value);
+                if (number > 1) {
+                    number -= 1;
+                    document.getElementsByClassName("item_num")[num].value = number;
+                }else window.alert("商品數量不得少於1");
+            }
+            function add(num) {
+                var number = Number(document.getElementsByClassName("item_num")[num].value);
+                if (number < 100) {
+                    number += 1;
+                    document.getElementsByClassName("item_num")[num].value = number;
+                }else window.alert("商品數量不得超過100");
+            }
+        </script>
+        
+        
+    
+
+
+    <footer>
+        瀏覽人數：1000人
+        <h5>Copyrgiht @ 2023 All rights reserved</h5>
+    </footer>
+</body>
+</html>

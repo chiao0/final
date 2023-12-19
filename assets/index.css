@@ -12,6 +12,7 @@ header {
     padding: 20px;
     margin: 0;
     text-align: right;
+    width: 100%;
 
 }
 
@@ -29,6 +30,7 @@ nav {
     text-align: center;
     font-family: Arial;
     color: rgba(12, 10, 10, 0.267);
+    width: 100%;
 
 }
 

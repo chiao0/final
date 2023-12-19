@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./goods.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.star-rating-svg.js"></script>
+    <script src="jquery.star-rating-svg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" type="text/css" href="star-rating-svg.css">
+    
 
 </head>
 <body>
@@ -14,7 +21,7 @@
         <a href="#">
             <img src="./assets/image/search.png" width="30px" height="30px"/>
         </a>
-        <a href="#">
+        <a href="buy.car.html">
             <img src="./assets/image/shopping.png" width="30px" height="30px"/>
         </a>
 
@@ -28,19 +35,18 @@
     <nav>
         <a href="index.html">首頁</a>
         <a href="aboutus.html">關於我們</a>
-        <a href="goods.html">商品</a>
+        <a href="all.goods.html">商品總覽</a>
         
         
     </nav>
 
     <div class="card">
-        <img src="./assets/image/table.jpg" class="productphoto">
+        <img src="./assets/image/table.jpg">
         
         <div class="text">
             <h1>桌子</h1><br>
-            售價<br>
-            1000<br>
-            商品庫存：10<br>
+            <div>NT：1000</div><br>
+            <div>商品庫存：10</div><br>
         </div>
 
         <div class="item1">
@@ -70,22 +76,112 @@
             <button class="addbutton">加入購物車</button>
         </div>
         
-    </div>
+    </div><br>
     
-
-    <hr align="center" width="1300px">
+    
+    
     <div class="introduce">
-        <h3>商品介紹<h3><br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor libero excepturi nemo commodi unde? Facilis, laborum aliquid ullam necessitatibus laboriosam porro! Repellat exercitationem nihil eligendi eius quae obcaecati error accusantium.</p>
+        <h2>商品介紹<h2>
+        <p class="introducetxt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor libero excepturi nemo commodi unde? Facilis, laborum aliquid ullam necessitatibus laboriosam porro! Repellat exercitationem nihil eligendi eius quae obcaecati error accusantium.</p>
     </div>
     <hr align="center" width="1300px">
-    商品評論
-    使用者姓名
-    星等
 
+    <div class="comment">
+        <div class="usercomments">
+            <p>評分及評論</p><br>
+            <input id="name" type="text" name="" placeholder="使用者名稱"><br>
+            <p>評論內容：</p><br>
+            <textarea id="content" name="" placeholder="" class="content"></textarea><br>
+            <button type="submit">傳送</button>
+        </div>
+
+        <!--<div class="my-rating-6"></div>  -->
+
+    </div>
+
+    <div class="commentarea">
+        <span>顧客1</span>
+        <span>★★★★★</span>
+        <p>家具品質很棒</p>
+        <span>顧客2</span>
+        <span>★★★★★</span>
+        <p>喜歡</p>
+        <span>顧客3</span>
+        <span>★★★★★</span>
+        <p>good!</p>
+    </div>
+
+
+  <!-- 
+  <input type="text" id="test"> 
+  -->
+
+    <script>
+        var array = '';
+
+        $(".my-rating-6").starRating({
+        totalStars: 5,
+        emptyColor: 'lightgray',
+        hoverColor: 'salmon',
+        activeColor: 'cornflowerblue',
+        initialRating: 4,
+        strokeWidth: 0,
+        useGradient: false,
+        minRating: 1,
+        callback: function (currentRating, $el) {
+            /*alert('rated ' + currentRating);
+            console.log('DOM element ', $el);
+            $('#test').attr("value", currentRating);
+            array = currentRating;*/
+
+            try {       
+            $.ajax({
+            type : 'POST',
+            cache : false,
+            url : 'http://xxxx/setRate.jsp',/*要接一支後端程式*/
+            data:{ /*傳遞rating值給JSP, 使用JSON格式*/
+                currentRating:currentRating
+                /*, productId: productID*/
+            },
+            async : true,
+            success : function(response) { /*JSP程式回傳結果*/
+                if(response.result){
+                alert('評分成功!');
+                }else{
+                alert(response.message);
+                }
+            },
+            error: function( jqXHR, textStatus, errorThrown ){
+                alert('xxx error');
+            }/*,
+            beforeSend: function( jqXHR, settings ){
+                
+            },
+            complete: function( jqXHR, textStatus ){
+                
+            }*/
+            });
+        } catch (err) {
+            alert(err);
+        }
+
+        }
+        });
+
+        // var app = new Vue({
+        //   el: '#test',
+        //   data: {
+        //     message: array
+        //   }
+        // })
+
+    
+    </script>
     <footer>
-        瀏覽人數
+        瀏覽人數：1000人
         <h5>Copyrgiht @ 2023 All rights reserved</h5>
     </footer>
 </body>
 </html>
+
+
