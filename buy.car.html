@@ -6,68 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>購物車</title>
     <link rel="stylesheet" href="buy.car.css">
-
 </head>
+
+
 <body>
     <header>
-        
         <a href="#">
-            <img src="./assets/image/search.png" width="30px" height="30px"/>
-        </a>
+          <img src="./assets/image/search.png" width="30px" height="30px"/></a>
         <a href="buy.car.html">
-            <img src="./assets/image/shopping.png" width="30px" height="30px"/>
-        </a>
-
+          <img src="./assets/image/shopping.png" width="30px" height="30px"/></a>
         <a href="#">
-            <img src="./assets/image/member.png" width="30px" height="30px"/>
-        </a>
-        
-        
-    </header>
+          <img src="./assets/image/member.png" width="30px" height="30px"/></a>
+      </header>
+
     
     <nav>
         <a href="index.html">首頁</a>
         <a href="aboutus.html">關於我們</a>
-        <a href="all.goods.html">商品總覽</a>
+        <a href="desk.html">商品總覽</a>
+        
     </nav>
 
-    <div class="card">
-        <img src="./assets/image/table.jpg" alt="Table" class="productphoto">
-        <div class="text">
-            <h1>桌子</h1>
-            <p>售價: 1000</p>
-            <p>商品庫存: 10</p>
-        </div>
-        <div class="item1">
-            <input type="button" value="-" class="item_button" onclick="minus(0)">
-            <input type="text" value="1" class="item_num">
-            <input type="button" value="+" class="item_button" onclick="add(0)">
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+    <article>
         
-        <script>
-            function minus(num) {
-                var number = Number(document.getElementsByClassName("item_num")[num].value);
-                if (number > 1) {
-                    number -= 1;
-                    document.getElementsByClassName("item_num")[num].value = number;
-                }else window.alert("商品數量不得少於1");
-            }
-            function add(num) {
-                var number = Number(document.getElementsByClassName("item_num")[num].value);
-                if (number < 100) {
-                    number += 1;
-                    document.getElementsByClassName("item_num")[num].value = number;
-                }else window.alert("商品數量不得超過100");
-            }
-        </script>
-        
-        
+        <div class="container">
+          <hr><h2 class="title">購物車</h2>
+          <h4 class="tagline">Shopping Cart</h4><hr>    
     
 
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>價格</th>
+                    <th>數量</th>
+                    <th>小計</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>歐式貴族風成長式椅子</td>
+                    <td>$50.00</td>
+                    <td>2</td>
+                    <td>$100.00</td>
+                </tr>
+                <tr>
+                    <td>歐式貴族風成長式書桌</td>
+                    <td>$30.00</td>
+                    <td>1</td>
+                    <td>$30.00</td>
+                </tr>
+                <!-- 添加更多商品行 -->
+                </tbody>
+            </table>
 
+        <p>Total: $130.00</p>
+
+        <a href="#" class="checkout-btn">結帳</a>
+    </div>
+    </article>
+        
+
+    <p>熱銷商品</p>
+        <section>
+            
+            <div class="hot">
+                <img src="./assets/image/chair.jpg" width="300px" height="300px"/> <!--要放商品連結-->
+                <img src="./assets/image/table.jpg" width="300px" height="300px"/> <!--要放商品連結-->
+                <img src="./assets/image/sofa.jpg" width="300px" height="300px"/> <!--要放商品連結-->
+            </div>
+        </section>
     <footer>
         瀏覽人數：1000人
         <h5>Copyrgiht @ 2023 All rights reserved</h5>

@@ -9,6 +9,7 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
+    
 
 </head>
 <body>
@@ -21,7 +22,7 @@
             <img src="./assets/image/shopping.png" width="30px" height="30px"/>
         </a>
 
-        <a href="#">
+        <a href="t.html">
             <img src="./assets/image/member.png" width="30px" height="30px"/>
         </a>
         
@@ -31,59 +32,95 @@
     <nav>
         <a href="index.html">首頁</a>
         <a href="aboutus.html">關於我們</a>
-        <a href="all.goods.html">商品總覽</a>
+        <a href="desk.html">商品總覽</a>
         
         
     </nav>
     <!--商品基本資訊-->
-    <div class="card">
-        <img src="./assets/image/table.jpg">
-        
-        <div class="text">
-            <h1>桌子</h1><br>
-            <div>NT：1000</div><br>
-            <div>商品庫存：10</div><br>
-        </div>
 
-        <div class="item1">
-            <!--調整數量的按鈕--> 
-            <input type="button" value="-" class="item_button" onclick="minus(0)">
-            <input type="text" value="1" class="item_num">
-            <input type="button" value="+"class="item_button" onclick="add(0)">
+    <class="productphoto">
+    <form action="">
+        <div class="slideshow-container">
+            <div class="singleSlide fade">
+                <img src="assets/product_images/AdjustTable1.png"/>
+                
+            </div>
+    
+    
+            <div class="singleSlide fade">
+                <img src="assets/product_images/AdjustTable2.png"/>
+                
+            </div>
+    
+            <div class="singleSlide fade">
+                <img src="assets/product_images/AdjustTable3.png"/>
+                
+            </div>
+    
+            <button class="prev" onclick="plusSlides(-1)">←</button>
+            <button class="next" onclick="plusSlides(1)">→</button>
         </div>
-        
-        <script>
-            // 調整數量的按鈕
-            function minus(num) {
-                var number = Number(document.getElementsByClassName("item_num")[num].value);
-                if (number > 1) {
-                    number -= 1;
-                    document.getElementsByClassName("item_num")[num].value = number;
-                }else window.alert("商品數量不得少於1");
-            }
-            function add(num) {
-                var number = Number(document.getElementsByClassName("item_num")[num].value);
-                if (number < 100) {
-                    number += 1;
-                    document.getElementsByClassName("item_num")[num].value = number;
-                }else window.alert("商品數量不得超過100");
-            }
-        </script>
-        
-        
+    
+        <script src="./js/ad2.js"></script>
 
-        <!--加入購物車按鈕-->
-        <div class="shoppingcart">
-            <button class="addbutton">加入購物車</button>
-        </div>
+
+        <div class="card">
         
-    </div><br>
+        
+            <div class="text">
+                <h1>桌子</h1><br>
+                <div>NT：1000</div><br>
+                <div>商品庫存：10</div><br>
+            </div>
+            <div class="item1">
+                <!--調整數量的按鈕-->
+                <input type="button" value="-" class="item_button" onclick="minus(0)">
+                <input type="text" value="1" class="item_num">
+                <input type="button" value="+"class="item_button" onclick="add(0)">
+            </div>
+        
+            <script>
+                // 調整數量的按鈕
+                function minus(num) {
+                    var number = Number(document.getElementsByClassName("item_num")[num].value);
+                    if (number > 1) {
+                        number -= 1;
+                        document.getElementsByClassName("item_num")[num].value = number;
+                    }else window.alert("商品數量不得少於1");
+                }
+                function add(num) {
+                    var number = Number(document.getElementsByClassName("item_num")[num].value);
+                    if (number < 100) {
+                        number += 1;
+                        document.getElementsByClassName("item_num")[num].value = number;
+                    }else window.alert("商品數量不得超過100");
+                }
+            </script>
+        
+        
+            <!--加入購物車按鈕-->
+            <div class="shoppingcart">
+                <button class="addbutton">加入購物車</button>
+            </div>
+        
+        </div><br>
+    </form>
     
     
     <!--商品介紹-->
+
     <div class="introduce">
-        <h2>商品介紹<h2>
-        <p class="introducetxt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor libero excepturi nemo commodi unde? Facilis, laborum aliquid ullam necessitatibus laboriosam porro! Repellat exercitationem nihil eligendi eius quae obcaecati error accusantium.</p>
+        <h2>商品介紹</h2>
+        <ul class="features">
+            <li>頂級意大利嚴謹挑選的牛皮</li>
+            <li>雙層坐墊，可自行抽取</li>
+            <li>高級回彈坐墊，硬度舒適</li>
+            <li>易清潔</li>
+            <li>復古風</li>
+
+        </ul>
+            
+            
     </div>
 
 

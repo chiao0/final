@@ -82,9 +82,12 @@ main {
 
 
 aside {
-    /*
+
     grid-area: 3/1/4/4;
-    */
+
+    /*
     grid-area: 4/1/5/3;
+    */
+
 
 }
