@@ -1,24 +1,18 @@
 * {
     box-sizing: border-box;
+    margin: 0px auto;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f0f0f0;
-    z-index: 6;
+    background-color: white;
+    margin: 0px;
 }
 
 header {
-    background-color: #E7D1C9;
+    background-color: #373535;
     padding: 20px;
     margin: 0;
     text-align: right;
-
 }
 
 
@@ -30,11 +24,21 @@ header img {
 
 }
 
+article {
+    margin: 0 auto;
+    width: 75%;
+    font-family: 微軟正黑體;
+    text-align: center;
+    color: #a54040;
+    font-size: 20px;
+
+}
 
 nav {
     text-align: center;
     font-family: Arial;
     color: rgba(12, 10, 10, 0.267);
+    width: 100%;
 
 }
 
@@ -49,68 +53,47 @@ nav a:hover {
     color: white;
 }
 
-img {
-    margin-right: 50px;
-    border-radius: 10px;
-}
-
-.productphoto {
-    width: 100%;
-    border-radius: 50px;
-    margin-bottom: 15px;
-}
-
-.text {
-    text-align: center;
-}
-
-.item1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.item_button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.item_num {
-    width: 40px;
-    text-align: center;
-}
-
-
-
-.item_button {
-    cursor: pointer;
-}
-
-.item1 {
-    margin-top: 200px;
-}
-
-.item_num {
-    width: 110px;
-    text-align: center;
-
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
     background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     padding: 20px;
-    margin: 20px;
-    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #a54040;
+    color: #fff;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #a54040;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
 
 
 footer {
@@ -118,4 +101,27 @@ footer {
     color: #444444;
     text-align: center;
     padding: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.hot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 標楷體;
+    color: #a54040;
 }
