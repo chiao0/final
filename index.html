@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>期末</title>
     <link rel="stylesheet" href="./assets/index.css">
+    
+    
 </head>
 <body>
+    
     <header>
         
         <a href="#">
@@ -21,6 +24,8 @@
             <img src="./assets/image/member.png" width="30px" height="30px"/>
         </a>
         
+
+    
        
     </header>
     
@@ -33,13 +38,42 @@
       
     </nav>
 
-
-
-    <section>
-        <img src="./assets/image/one.png">
+    
+    
+    <div class="slideshow-container">
+        <div class="singleSlide fade">
+            <img class="adphoto"
+                src="assets/image/adphoto3.jpg"
+                
+            />
+            
+        </div>
         
-    </section>
+        <div class="singleSlide fade">
+            <img class="adphoto"
+                src="assets/image/adphoto4.jpg" 
+                
+            />
+            
+        </div>
+        
+        <div class="singleSlide fade">
+            <img class="adphoto"
+                src="https://images.unsplash.com/photo-1554995328-f1d4912c0497?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxmbGFzaHxlbnwwfHwwfHx8MA%3D%3D" 
+                
+            />
+            
+        </div>
 
+        <!--按鈕-->
+        <button class="prev" onclick="plusSlides(-1)"><</button>
+        <button class="next" onclick="plusSlides(1)">></button>
+    </div>
+
+    <!--JAVASCRIPT 引入-->
+   
+    <script src="assets/index.js"></script>
+    
     <p>熱銷商品</p>
     <section>
         
@@ -61,5 +95,8 @@
         瀏覽人數：1000人
         <h5>Copyrgiht @ 2023 All rights reserved</h5>
     </footer>
+    
+    
+    
 </body>
 </html>

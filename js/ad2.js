@@ -1,26 +1,27 @@
-let slideIndex =1;
+let slideIndex = 1;
 
-function showSlides(props) {
+function showSlides() {
     let i;
     let slides = document.getElementsByClassName("singleSlide");
 
-    if (props > slides.length) {
-        slideIndex=1;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
     }
 
-    if (props <1) {
-        slideIndex = slides.length;
-    }
-    
-    for (i=0;i< slides.length; i++) {
-        slides[i].style.display ="none";
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
     }
 
-    slides[slideIndex -1].style.display="flex";
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "flex";
 }
 
 function plusSlides(a) {
-    showSlides((slideIndex += a));
+    slideIndex += a;
+    showSlides();
 }
 
-plusSlides(slideIndex);
+showSlides();

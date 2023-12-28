@@ -10,6 +10,7 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
     
+    
 
 </head>
 <body>
@@ -38,39 +39,41 @@
     </nav>
     <!--商品基本資訊-->
 
-    <class="productphoto">
+    
     <form action="">
         <div class="slideshow-container">
             <div class="singleSlide fade">
-                <img src="assets/product_images/AdjustTable1.png"/>
-                
+                <img src="assets/product_images/BigSofa1.png"/>
             </div>
     
     
             <div class="singleSlide fade">
-                <img src="assets/product_images/AdjustTable2.png"/>
+                <img src="assets/product_images/BigSofa2.png"/>
                 
             </div>
     
             <div class="singleSlide fade">
-                <img src="assets/product_images/AdjustTable3.png"/>
+                <img src="assets/product_images/BigSofa3.png"/>
                 
             </div>
     
             <button class="prev" onclick="plusSlides(-1)">←</button>
             <button class="next" onclick="plusSlides(1)">→</button>
         </div>
-    
+        
         <script src="./js/ad2.js"></script>
+        
 
-
+        
         <div class="card">
         
         
             <div class="text">
-                <h1>桌子</h1><br>
-                <div>NT：1000</div><br>
-                <div>商品庫存：10</div><br>
+                <h1>貓抓皮雙人沙發</h1><br>
+                <div class="price">NT：1000</div><br>
+                
+                
+
             </div>
             <div class="item1">
                 <!--調整數量的按鈕-->
@@ -99,9 +102,9 @@
         
         
             <!--加入購物車按鈕-->
-            <div class="shoppingcart">
-                <button class="addbutton">加入購物車</button>
-            </div>
+            <div class="inventory">商品庫存：10</div><br>
+            <button value="加入購物車" class="addbutton">加入購物車</button>
+            
         
         </div><br>
     </form>
@@ -111,15 +114,14 @@
 
     <div class="introduce">
         <h2>商品介紹</h2>
-        <ul class="features">
-            <li>頂級意大利嚴謹挑選的牛皮</li>
-            <li>雙層坐墊，可自行抽取</li>
-            <li>高級回彈坐墊，硬度舒適</li>
-            <li>易清潔</li>
-            <li>復古風</li>
-
-        </ul>
+        <div class="features">
+            <div>養寵物專用推薦、防水防塵、清潔簡易、特殊彈簧</div>
+            <div>尺寸:70*180*100公分</div>
             
+
+
+        </div>
+        
             
     </div>
 
@@ -129,8 +131,8 @@
     <p class="commenttxt">評論區</p><br>
     <div class="comment">
           
-        使用者名稱：
-        <input id="name" type="text" name="" placeholder="使用者名稱" class="username"><br>
+        
+        <input id="name" type="text" name="" placeholder="請輸入使用者名稱" class="username"><br>
 
         <!--星星-->
         <div class="star" id="star-rating">
@@ -174,8 +176,8 @@
 
         <!--評論內容輸入區域與傳送按鈕-->
         <p>評論內容：</p><br>
-        <textarea id="content" name="" placeholder="" maxlength="1000" class="content"></textarea><br>
-        <button type="submit">傳送</button>
+        <textarea id="content" name="" placeholder="說點什麼..." maxlength="1000" class="content"></textarea><br>
+        <button type="submit" value="send" class="sendbutton">送出</button>
         
         
         

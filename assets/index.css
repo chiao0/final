@@ -3,12 +3,13 @@
 }
 
 body {
-    background-color: #fff1e6;
+    background-color: #f0ebe6;
     margin: 0px;
 }
 
 header {
-    background-color: #E7D1C9;
+    background-color: #e1d5d2;
+
     padding: 20px;
     margin: 0;
     text-align: right;
@@ -85,4 +86,79 @@ section img {
     height: auto;
     margin: 0 30px;
 
+}
+
+
+
+
+
+
+.slideshow-container {
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+}
+
+.singleSlide {
+    display: none;
+}
+
+.adphoto {
+    width: 1550px;
+    max-height: 700px;
+    object-fit: cover;
+
+}
+
+/*先給absolute的位子 再用top置中*/
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 50px;
+    padding: 16px;
+    color: black;
+    background-color: transparent;
+    border: transparent solid 1px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/*滑鼠靠上去時有變化*/
+.prev:hover,
+.next:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+
+/*Fadding animation*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
