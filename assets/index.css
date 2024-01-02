@@ -9,11 +9,16 @@ body {
 
 header {
     background-color: #e1d5d2;
-
     padding: 20px;
     margin: 0;
     text-align: right;
     width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+
+
 
 }
 
@@ -21,6 +26,11 @@ header {
 header img {
     margin-right: 10px;
 
+
+}
+
+.icon {
+    margin-left: auto;
 }
 
 .logo {
@@ -31,22 +41,12 @@ header img {
 
 nav {
     text-align: center;
-    font-family: Arial;
-    color: rgba(12, 10, 10, 0.267);
-    width: 100%;
+    max-width: 30%;
+    margin-right: auto;
+
 
 }
 
-nav a {
-    padding: 14px 16px;
-    display: inline-block;
-
-}
-
-nav a:hover {
-    background-color: #E7D1C9;
-    color: white;
-}
 
 footer {
     background-color: #EEDDD3;
@@ -96,9 +96,11 @@ section img {
 
 
 .slideshow-container {
-    max-width: 2000px;
+    margin-top: 20px;
+    max-width: 100%;
     position: relative;
     margin: auto;
+
 }
 
 .singleSlide {
@@ -106,7 +108,7 @@ section img {
 }
 
 .adphoto {
-    width: 1550px;
+    width: 100%;
     max-height: 700px;
     object-fit: cover;
 
@@ -163,4 +165,69 @@ section img {
     100% {
         opacity: 1;
     }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+    font-size: 17px;
+    margin-top: 20px;
+
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+
+}
+
+
+
+ul.drop-down-menu>li {
+    float: left;
+
+}
+
+ul.drop-down-menu a {
+    background-color: #e1d5d2;
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+
+ul.drop-down-menu a:hover {
+    background-color: #ccafa7;
+    color: #fff;
+}
+
+ul.drop-down-menu li:hover>a {
+    background-color: #ccafa7;
+    color: #fff;
+}
+
+
+ul.drop-down-menu ul {
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 180px;
+    display: none;
+
+
+}
+
+
+
+
+ul.drop-down-menu li:hover>ul {
+    display: block;
 }
