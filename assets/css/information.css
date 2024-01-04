@@ -1,0 +1,128 @@
+body {
+    margin: 0 auto;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 左右置中 */
+    height: 100vh;
+    /* 上下置中 */
+    position: relative;
+}
+
+.selectbutton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+
+
+.selectbutton input {
+    font-size: 18px;
+    letter-spacing: 3px;
+    width: 120px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: black;
+    background-color: white;
+    /*按鈕顏色*/
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+
+#memberDataSection {
+    display: flex;
+    flex-direction: row;
+    /* 改成水平排列 */
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: lightsalmon;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.OrderForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* 區塊背景色為白色 */
+    padding: 20px;
+    border-radius: 10px;
+    /* 可以加入圓角效果 */
+}
+
+table {
+    width: 100%;
+    /* 使用100%寬度，擴展至父元素的寬度 */
+    max-width: 1200px;
+    /* 設定最大寬度，可以根據需求調整 */
+    margin: 0 auto;
+    /* 左右居中 */
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+
+p {
+    text-align: center;
+}
+
+.part label {
+    margin: 5px 5px;
+    text-align: right;
+}
+
+
+
+.input input {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 23px;
+    font-size: 16px;
+    color: black;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    /*底下顏色*/
+    padding: 5px 2px;
+    letter-spacing: 1px;
+    margin: 20px 0px;
+    /*outline: none;*/
+}
+
+th,
+td {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+}

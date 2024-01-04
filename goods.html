@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Blanket</title>
-    <link rel="stylesheet" href="./goods.css">
+    <link rel="stylesheet" href="assets/css/goods.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     
@@ -40,11 +40,8 @@
         </nav>
 
 
-        <!--<img class="logo" src="assets/image/Logo.png "/>-->
+        
         <div class="icon">
-            <a href="#">
-                <img src="./assets/image/search.png" width="30px" height="30px"/>
-            </a>
             <a href="buy.car.html">
                 <img src="./assets/image/shopping.png" width="30px" height="30px"/>
             </a>
@@ -53,47 +50,45 @@
             </a>
         </div>
     
-       
+        <input id="search" type="text" name="" placeholder="搜尋..." class="search">
     </header>
     
+    <div class="information">
         <!--商品圖片-->
         <div class="slideshow-container">
             <div class="singleSlide fade">
                 <img class="productphoto"
-                src="assets/product_images/BigSofa1.png"/>
-                
+                src="./assets/product_images/BigSofa1.png"/>
+        
             </div>
-    
-    
             <div class="singleSlide fade">
                 <img class="productphoto"
-                src="assets/product_images/BigSofa2.png"/>
-                
+                src="./assets/product_images/BigSofa2.png"/>
+        
             </div>
-    
             <div class="singleSlide fade">
                 <img class="productphoto"
-                src="assets/product_images/BigSofa3.png"/>
-                
+                src="./assets/product_images/BigSofa3.png"/>
+        
             </div>
             <!--商品圖片切換按鈕-->
             <button class="prev" onclick="plusSlides(-1)"><</button>
             <button class="next" onclick="plusSlides(1)">></button>
         </div>
         <!--商品圖片JS-->
-        <script src="assets/index.js"></script>
+        <script src="./assets/js/index.js"></script>
         
         <!--商品基本資訊-->
         
         <div class="card">
-            
+        
             <h1>貓抓皮雙人沙發</h1><br>
             <div class="price">NT$：1000</div><br>
-                
-            
-            
+        
+        
+        
             <div class="inventory">商品庫存：10</div>
-            
+        
             <div class="item1">
                 <!--調整數量的按鈕-->
                 <input type="button" value="-" class="item_button" onclick="minus(0)">
@@ -101,36 +96,36 @@
                 <input type="button" value="+"class="item_button" onclick="add(0)">
             </div>
         
-            
-            
-            
+        
+        
+        
             <!--加入購物車按鈕-->
-            
+        
             <button value="加入購物車" class="addbutton">加入購物車</button>
         
         </div><br>
-    
         
-    
-    <!--商品介紹-->
-
-    <div class="introduce">
-        <h2>商品介紹</h2>
-        <div class="features">
-            <div>
-                <ul>
-                <li>養寵物專用推薦</li>
-                <li>防水防塵</li>
-                <li>清潔簡易</li>
-                <li>特殊彈簧</li>
-                </ul>
-                
+        
+        
+        <!--商品介紹-->
+        <div class="introduce">
+            <h2>商品介紹</h2>
+            <div class="features">
+                <div>
+                    <ul>
+                    <li>養寵物專用推薦</li>
+                    <li>防水防塵</li>
+                    <li>清潔簡易</li>
+                    <li>特殊彈簧</li>
+                    </ul>
+        
+                </div>
+                <div>尺寸:70*180*100公分</div>
+        
             </div>
-            <div>尺寸:70*180*100公分</div>
-            
-        </div>
         
-            
+        
+        </div>
     </div>
 
 
@@ -257,6 +252,8 @@
   
     <footer>
         瀏覽人數：1000人
+        <p>Tel：03 265 9999</p>
+        <p>地址：320桃園市中壢區中北路200號</p>
         <h5>Copyrgiht @ 2023 All rights reserved</h5>
     </footer>
 </body>

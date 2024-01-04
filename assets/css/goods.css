@@ -30,6 +30,8 @@ header img {
 
 }
 
+
+
 .icon {
     margin-left: auto;
 }
@@ -43,22 +45,10 @@ nav {
 
 }
 
-nav a {
-    padding: 14px 16px;
-    display: inline-block;
-
-
-}
-
-nav a:hover {
-    background-color: #E7D1C9;
-    color: white;
-}
-
 
 
 .card {
-    background-color: rgb(237, 226, 214);
+    background-color: #EEDDD3;
     width: 33%;
     height: 290px;
     position: relative;
@@ -172,7 +162,7 @@ h2 {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     clear: both;
     height: 250px;
     margin-right: 225px;
@@ -187,7 +177,7 @@ h2 {
 
 .features {
     font-size: 18px;
-    margin-top: -30px;
+    margin-top: -15px;
     font-family: 微軟正黑體;
     padding: 15px;
 
@@ -199,6 +189,7 @@ h2 {
     margin-left: 380px;
     margin-top: -30px;
     color: #FDDD33;
+    cursor: pointer;
 
 }
 
@@ -250,8 +241,6 @@ h2 {
     margin-bottom: 50px;
     border-radius: 10px;
     border-color: #EEDDD3;
-
-
 
 
 }
@@ -430,4 +419,11 @@ ul.drop-down-menu ul {
 
 ul.drop-down-menu li:hover>ul {
     display: block;
+}
+
+.search {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ccafa7;
+    outline: #f0ebe6;
 }

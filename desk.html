@@ -5,23 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>商品總頁</title>
-    <link rel="stylesheet" href="all.goods.css">
+    <link rel="stylesheet" href="./assets/css/all.goods.css">
 </head>
   <body>
     <header>
-      <a href="#">
-        <img src="./assets/image/search.png" width="30px" height="30px"/></a>
-      <a href="buy.car.html">
-        <img src="./assets/image/shopping.png" width="30px" height="30px"/></a>
-        <a href="member.html">
-        <img src="./assets/image/member.png" width="30px" height="30px"/></a>
-    </header>
+      <nav>
+          <ul class="drop-down-menu">
+              <li><a href="index.html">首頁</a>
+              </li>
+              <li><a href="aboutus.html">關於我們</a>
+              </li>
+              <li><a href="desk.html">商品</a>
+                  <ul>
+                      <li><a href="desk.html">書桌</a>
+                      </li>
+                      <li><a href="chair.html">椅子</a>
+                      </li>
+                      <li><a href="cabinet.html">櫃子</a>
+                      </li>
+                      <li><a href="sofa.html">沙發</a>
+                      </li>
+                  </ul>
+              </li>
+              
+          </ul>
+        
+      </nav>
 
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="aboutus.html">關於我們</a>
-      <a href="desk.html">商品總覽</a>
-    </nav>
+
+      
+      <div class="icon">
+          <a href="buy.car.html">
+              <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+          </a>
+          <a href="member.html">
+              <img src="./assets/image/member.png" width="30px" height="30px"/>
+          </a>
+      </div>
+  
+      <input id="search" type="text" name="" placeholder="搜尋..." class="search">
+  </header>
 
     <div class="ad">
       <!-- ad content -->

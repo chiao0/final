@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>購物車</title>
-    <link rel="stylesheet" href="buy.car.css">
+    <link rel="stylesheet" href=".//assets/css/buy.car.css">
 </head>
 
 
@@ -15,7 +15,7 @@
           <img src="./assets/image/search.png" width="30px" height="30px"/></a>
         <a href="buy.car.html">
           <img src="./assets/image/shopping.png" width="30px" height="30px"/></a>
-          <a href="member.html">
+        <a href="#">
           <img src="./assets/image/member.png" width="30px" height="30px"/></a>
       </header>
 
@@ -28,59 +28,73 @@
     </nav>
 
 
-    <article>
-        
-        <div class="container">
-          <hr><h2 class="title">購物車</h2>
-          <h4 class="tagline">Shopping Cart</h4><hr>    
-    
-
+<article>
     <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>商品</th>
-                    <th>價格</th>
-                    <th>數量</th>
-                    <th>小計</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>歐式貴族風成長式椅子</td>
-                    <td>$50.00</td>
-                    <td>2</td>
-                    <td>$100.00</td>
-                </tr>
-                <tr>
-                    <td>歐式貴族風成長式書桌</td>
-                    <td>$30.00</td>
-                    <td>1</td>
-                    <td>$30.00</td>
-                </tr>
-                <!-- 添加更多商品行 -->
+        <hr><h2 class="title">購物車</h2>
+        <h4 class="tagline">Shopping Cart</h4><hr>    
+    
+        <div class="container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>價格(NT)</th>
+                        <th>數量</th>
+                        <th>小計(NT)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="delete-btn" onclick="deleteProduct('quantity1')">X</button>
+                            雙人沙發
+                        </td>
+                        <td class="price">$14600</td>
+                        <td class="quantity" id="quantity1">
+                            <button class="quantity-btn" onclick="updateQuantity('quantity1', -1)">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('quantity1', 1)">+</button>
+                        </td>
+                        <td class="subtotal">$14600</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="delete-btn" onclick="deleteProduct('quantity2')">X</button>
+                            實木複合式書桌
+                        </td>
+                        <td class="price">$3950</td>
+                        <td class="quantity" id="quantity2">
+                            <button class="quantity-btn" onclick="updateQuantity('quantity2', -1)">-</button>
+                            <span class="quantity-value">3</span>
+                            <button class="quantity-btn" onclick="updateQuantity('quantity2', 1)">+</button>
+                        </td>
+                        <td class="subtotal">$3950</td>
+                    </tr>
+                    
                 </tbody>
             </table>
 
-        <p>Total: $130.00</p>
+            <p id="total">Total: $18550</p>
 
-        <a href="#" class="checkout-btn">結帳</a>
+            <label for="paymentMethod">付款方式:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="creditCard">信用卡</option>
+                <option value="creditCard">金融卡</option>
+            </select>
+
+            <label for="creditCardNumber">卡號:</label>
+            <input type="text" id="creditCardNumber" name="creditCardNumber">
+
+            <label for="shippingAddress">運送地址:</label>
+            <input type="text" id="shippingAddress" name="shippingAddress">
+
+            <button class="checkout-btn" onclick="checkout()">結帳</a>
+        </div>
     </div>
-    </article>
-        
+</article>
 
-    <p>熱銷商品</p>
-        <section>
-            
-            <div class="hot">
-                <img src="./assets/image/chair.jpg" width="300px" height="300px"/> <!--要放商品連結-->
-                <img src="./assets/image/table.jpg" width="300px" height="300px"/> <!--要放商品連結-->
-                <img src="./assets/image/sofa.jpg" width="300px" height="300px"/> <!--要放商品連結-->
-            </div>
-        </section>
-    <footer>
-        瀏覽人數：1000人
-        <h5>Copyrgiht @ 2023 All rights reserved</h5>
-    </footer>
+<script src="buy.car.js"></script>   
+
+    
 </body>
 </html>

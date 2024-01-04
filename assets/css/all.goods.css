@@ -9,16 +9,40 @@ body {
 }
 
 header {
-    background-color: #373535;
+    background-color: #e1d5d2;
     padding: 20px;
     margin: 0;
     text-align: right;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+
+
+
 }
 
+
 header img {
-    max-width: 100px;
-    max-height: 50px;
     margin-right: 10px;
+
+
+}
+
+
+
+.icon {
+    margin-left: auto;
+}
+
+
+nav {
+    text-align: center;
+    max-width: 30%;
+    margin-right: auto;
+
+
 }
 
 .ad {
@@ -35,27 +59,7 @@ header img {
     margin: 0 30px;
 }
 
-nav {
-    text-align: center;
-    font-family: Arial;
-    color: rgba(12, 10, 10, 0.267);
-    background: rgba(255, 255, 255, 0.8) url(assets/image/brown.png);
-}
 
-nav a {
-    padding: 14px 16px;
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid #000;
-    margin: 5px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #E7D1C9;
-    color: white;
-    font-family: 微軟正黑體;
-}
 
 footer {
     position: relative;
@@ -77,7 +81,7 @@ main {
     padding: 50px;
     margin: 50px 10px;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.9) url(assets/image/brown2.jpg);
+    background: rgba(255, 255, 255, 0.9), url(/assets/image/brown2.jpg);
     background-size: cover;
 }
 
@@ -137,4 +141,76 @@ aside {
         max-width: 100%;
         height: 90%;
     }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+    font-size: 17px;
+    margin-top: 20px;
+
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+
+}
+
+
+
+ul.drop-down-menu>li {
+    float: left;
+
+}
+
+ul.drop-down-menu a {
+    background-color: #e1d5d2;
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+
+ul.drop-down-menu a:hover {
+    background-color: #ccafa7;
+    color: #fff;
+}
+
+ul.drop-down-menu li:hover>a {
+    background-color: #ccafa7;
+    color: #fff;
+}
+
+
+ul.drop-down-menu ul {
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 180px;
+    display: none;
+
+
+}
+
+
+
+
+ul.drop-down-menu li:hover>ul {
+    display: block;
+}
+
+.search {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ccafa7;
+    outline: #f0ebe6;
 }
