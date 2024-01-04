@@ -48,7 +48,8 @@ nav {
 
 
 .card {
-    background-color: #EEDDD3;
+
+    background: #ede1d4;
     width: 33%;
     height: 290px;
     position: relative;
@@ -117,7 +118,7 @@ h2 {
 
 
 .addbutton:hover {
-    background-color: #da976e;
+    background-color: #dfa48fd4;
     cursor: pointer;
 }
 
@@ -251,6 +252,7 @@ footer {
     text-align: center;
     padding: 10px;
     clear: both;
+    line-height: 3px;
 }
 
 .slideshow-container {
@@ -352,7 +354,7 @@ footer {
 }
 
 .sendbutton:hover {
-    background-color: #da976e;
+    background-color: #dfa48fd4;
     cursor: pointer;
 }
 

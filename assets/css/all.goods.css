@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0px auto;
+
 }
 
 body {
@@ -33,7 +33,7 @@ header img {
 
 
 .icon {
-    margin-left: auto;
+    margin-left: 600px;
 }
 
 
