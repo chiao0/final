@@ -9,60 +9,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>商品總頁</title>
-    <link rel="stylesheet" href="all.goods.css">
+    <link rel="stylesheet" href="./assets/css/all.goods.css">
 
-   <!--計數器-->
-   <script>
-    window.onload = function() {
-        // 在頁面載入完成後，執行此JavaScript 代碼
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // 將伺服器回傳的數字插入到頁面中
-                document.getElementById("counter").innerHTML = xhr.responseText;
-            }
-        };
-        xhr.open("GET", "counter.jsp", true);
-        xhr.send();
-    };
-</script>
+   
+<!-- CSS styles to center images and text -->
+<style>
+  .card {
+      text-align: center;
+      margin-top: 0px;
+      margin-left: 150px;
 
+  }
+
+  .card img {
+      display: block;
+      border-radius: 20%;
+      max-width: 400px;
+      height: auto;
+      margin: 0 auto;
+      
+  }
+</style>
+  
 </head>
-  <body>
+<body>
     <header>
-      <a href="#">
-        <img src="./assets/image/search.png" width="30px" height="30px"/></a>
-      <a href="buy.car.html">
-        <img src="./assets/image/shopping.png" width="30px" height="30px"/></a>
-        <a href="t.html">
-        <img src="./assets/image/member.png" width="30px" height="30px"/></a>
+        <nav>
+            <ul class="drop-down-menu">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="aboutus.html">關於我們</a></li>
+                <li>
+                    <a href="desk.html">商品</a>
+                    <ul>
+                        <li><a href="desk.jsp">書桌</a></li>
+                        <li><a href="chair.jsp">椅子</a></li>
+                        <li><a href="cabinet.jsp">櫃子</a></li>
+                        <li><a href="sofa.jsp">沙發</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icon">
+            <a href="buy.car.html">
+                <img src="./assets/image/shopping.png" width="30px" height="30px"/>
+            </a>
+            <a href="t.html">
+                <img src="./assets/image/member.png" width="30px" height="30px"/>
+            </a>
+        </div>
+
+        <form action="search.jsp" method="get">
+            <input id="search" type="text" name="search" placeholder="搜尋..." class="search">
+            <input type="submit" value="搜索">
+        </form>
     </header>
 
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="aboutus.html">關於我們</a>
-      <a href="desk.html">商品總覽</a>
-    </nav>
-
-    <div class="ad">
-      <!-- ad content -->
-      <img src="./assets/image/one.png" alt="Ad Image">
-    </div>
-
-    <nav>
-      <a href="desk.jsp">書桌</a>
-      <a href="chair.jsp">椅子</a>
-      <a href="cabinet.jsp">櫃子</a>
-      <a href="sofa.jsp">沙發</a>
-    </nav>
 
     <main>
       <article>
         
         <div class="container">
-          <hr><h2 class="title">椅子</h2>
-          <h4 class="tagline">Chair</h4><hr>    
-      </article>
+          <hr><h2 class="title">櫃子</h2>
+          <h4 class="tagline">Cabint</h4><hr>    
+        </article>
     <%
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -78,7 +88,7 @@
                     } else {
                         con.createStatement().execute("USE `sofabed`");
 
-                        String sql = "SELECT `id`, `imgstyle`, `src`, `productname` FROM `new product` WHERE `id` BETWEEN 11 AND 15";
+                        String sql = "SELECT `id`, `imgstyle`, `src`, `productname` FROM `new product` WHERE `id` BETWEEN 16 AND 20";
                         ResultSet rs = con.createStatement().executeQuery(sql);
 
                         while (rs.next()) {
@@ -115,7 +125,7 @@
     <div class="clearfix"></div>
 
     <footer>
-      瀏覽人數：<span id="counter"></span>
+     
     <h5>Copyrgiht @ 2023 All rights reserved</h5>
     </footer>
   </body>

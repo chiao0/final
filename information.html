@@ -12,34 +12,34 @@
       <div class="selectbutton">
          <label for="memberProfile"><input type="button" value="會員資料" onclick="showMemberData()"></label>
          <label for="order"><input type="button" value="訂單紀錄" onclick="showOrderRecords()"></label>
-         <label for="Home"><input type="button" value="回主頁"></label>
+         <label for="Home"><a href="index.html"><input type="button" value="回主頁"></a></label>
       </div>
-      
 
       <div id="memberDataSection">
-         <div class="part">
-            <p>個人資料</p>
-            <div class="input">
-               <input type="text" value="Name">
-               <input type="text" value="Gender">
-               <input type="text" value="Phone">
-               <input type="text" value="abc@gmail.com">
-               <input type="text" value="Address">
-               <input type="date" value="出生日期">
+         <form action="update.jsp" method="POST"></form>
+            <div class="part">
+               <p>個人資料</p>
+               <div class="input">
+                  <input name="name" type="text" placeholder="Name" value="John Doe">
+                  <input type="text" placeholder="Gender" value="Male">
+                  <input type="text" placeholder="abc@gmail.com" value="john.doe@gmail.com">
+                  <input type="text" placeholder="Phone" value="0911257460">
+                  <input type="text" placeholder="Address" value="桃園市中壢區中北路200號">
+                  <input type="date" placeholder="出生日期" value="2000-01-01">
+               </div>
+               
             </div>
-            <label for="UPDATE"><input type="button" value="UPDATE"></label>
-         </div>
+         </form>
          
          <div class="part">
             <p>帳號密碼</p>
             <div class="input">
-               <input type="text" value="Account Name">
-               <input type="text" value="Password">
+               <input name="id" type="text" placeholder="Account Name">
+               <input name="pwd" type="text" placeholder="Password" >
             </div>
-            <label for="UPDATE"><input type="button" value="UPDATE"></label>
+            <label for="UPDATE"><input type="button" value="UPDATE" onclick="window.location.href='update.jsp'"></label>
          </div>
       </div>
-      
       
       <div class="OrderForm" id="orderRecordsSection" style="display:none;">
          <table>
@@ -72,6 +72,6 @@
          </table>
       </div>
    </section>
-   <script src="assets/js/information.js"></script>
+   <script src="information.js"></script>
 </body>
 </html>

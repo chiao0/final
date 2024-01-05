@@ -18,7 +18,6 @@ try {
     con = DriverManager.getConnection(url, "root", "1234");
     con.setAutoCommit(false);
 
-    // 查询数据库中的值
     String selectSQL = "SELECT counter_value FROM counter";
     try (PreparedStatement selectStmt = con.prepareStatement(selectSQL);
          ResultSet rs = selectStmt.executeQuery()) {
@@ -30,7 +29,6 @@ try {
                 c++;
                 out.print(c);
 
-                // 更新数据库中的值
                 String updateSQL = "UPDATE counter SET counter_value = ?";
                 try (PreparedStatement updateStmt = con.prepareStatement(updateSQL)) {
                     updateStmt.setInt(1, c);

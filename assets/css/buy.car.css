@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0px auto;
+    
 }
 
 body {
@@ -34,7 +34,7 @@ header img {
 }
 
 .icon {
-    margin-left: 900px;
+    margin-left: 1000px;
 }
 
 article {
@@ -48,7 +48,7 @@ article {
 }
 
 nav {
-    text-align: center;
+    text-align: right;
     max-width: 30%;
     margin-right: auto;
 
@@ -242,10 +242,3 @@ ul.drop-down-menu li:hover>ul {
     display: block;
 }
 
-.search {
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #ccafa7;
-    outline: #f0ebe6;
-
-}
