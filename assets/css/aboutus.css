@@ -9,6 +9,59 @@ body {
     margin: 0px;
 }
 
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.membercard {
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.membercard img {
+    width: 300px;
+    height: 350px;
+    border-radius: 8px;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+    border-radius: 8px;
+}
+
+.membercard:hover .info {
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+    height: 350px;
+
+}
+
+
+
+
 header {
     background-color: #e1d5d2;
     padding: 20px;
@@ -45,47 +98,8 @@ nav {
 
 }
 
-footer {
-    background-color: #EEDDD3;
-    color: #444444;
-    text-align: center;
-    padding: 10px;
-}
-
-main {
-    padding: 20px;
-    display: grid;
-    width: 70%;
-    /*
-    grid-template-columns: 1fr 1fr 1fr;
-    */
-    grid-auto-flow: row;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    background-image: url(image/card_img.jpg);
-    background-size: cover;
-    text-align: center;
-
-}
 
 
-aside {
-
-    grid-area: 3/1/4/4;
-
-    /*
-    grid-area: 4/1/5/3;
-    */
-
-
-}
 
 ul {
     margin: 0;
@@ -157,4 +171,38 @@ ul.drop-down-menu li:hover>ul {
     border-style: solid;
     border-color: #ccafa7;
     outline: #f0ebe6;
+}
+
+footer {
+    background-color: #EEDDD3;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    line-height: 20px;
+}
+
+.text {
+    font-size: 25px;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    color: white;
+    background-color: #ccafa7;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+h3 {
+    color: #bd895f;
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+p {
+    color: #444444;
+
 }

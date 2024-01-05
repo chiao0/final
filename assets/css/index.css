@@ -133,7 +133,7 @@ section img {
 
 .next {
     right: 0;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /*滑鼠靠上去時有變化*/
@@ -251,26 +251,12 @@ ul.drop-down-menu li:hover>ul {
     margin-right: 50px;
     height: 500px;
     border-radius: 10px;
-
-
-
-}
-
-.content:hover {
-    width: 720px;
-    background: #ccafa7d2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 50px;
-    height: 520px;
-    border-radius: 10px;
     transition: width 1s, height 1s;
 
 
+
+
 }
-
-
 
 
 
@@ -291,6 +277,17 @@ ul.drop-down-menu li:hover>ul {
     display: flex;
     justify-content: center;
     margin: 50px auto 50px auto;
+    transition: width 1s, height 1s;
+    width: 1200px;
+    height: 500px;
+}
+
+.wrap:hover {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 50px auto;
+    width: 1220px;
+    height: 520px;
 }
 
 .logo {
