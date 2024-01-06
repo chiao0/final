@@ -7,21 +7,7 @@
     <title>Security Blanket</title>
     <link rel="stylesheet" href="./assets/css/index.css">
     
-    <!--計數器-->
-    <script>
-        window.onload = function() {
-            // 在頁面載入完成後，執行此JavaScript 代碼
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // 將伺服器回傳的數字插入到頁面中
-                    document.getElementById("counter").innerHTML = xhr.responseText;
-                }
-            };
-            xhr.open("GET", "counter.jsp", true);
-            xhr.send();
-        };
-    </script>
+    
 </head>
 <body>
     <header>
@@ -31,15 +17,15 @@
                 </li>
                 <li><a href="aboutus.html">關於我們</a>
                 </li>
-                <li><a href="desk.jsp">商品</a>
+                <li><a href="desk.html">商品</a>
                     <ul>
-                        <li><a href="desk.jsp">書桌</a>
+                        <li><a href="desk.html">書桌</a>
                         </li>
-                        <li><a href="chair.jsp">椅子</a>
+                        <li><a href="chair.html">椅子</a>
                         </li>
-                        <li><a href="cabinet.jsp">櫃子</a>
+                        <li><a href="cabinet.html">櫃子</a>
                         </li>
-                        <li><a href="sofa.jsp">沙發</a>
+                        <li><a href="sofa.html">沙發</a>
                         </li>
                     </ul>
                 </li>
@@ -57,15 +43,13 @@
             <a href="buy.car.html">
                 <img src="./assets/image/shopping.png" width="30px" height="30px"/>
             </a>
-            <a href="t.html">
+            <a href="member.html">
                 <img src="./assets/image/member.png" width="30px" height="30px"/>
             </a>
         </div>
     
-        <form action="search.jsp" method="get">
-            <input id="search" type="text" name="search" placeholder="搜尋..." class="search">
-            <input type="submit" value="搜索">
-        </form>
+        <input id="search" type="text" name="" placeholder="搜尋..." class="search">
+        <input type="submit" value="搜尋" class="searchbutton">
     </header>
     
     
@@ -120,7 +104,7 @@
     
 
     <footer>
-        <h5>瀏覽人數：<span id="counter"></span>
+        <h5>瀏覽人數：1000人</h5>
         <h5>電話：03 265 9999 |地址：320桃園市中壢區中北路200號</h5>
         <h5>Copyrgiht @ 2023 All rights reserved</h5>
     </footer>

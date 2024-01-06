@@ -31,7 +31,7 @@ let slideIndex = 0;
         showSlides();
     }
 
-    
+    //4.5秒換一張圖
     setInterval(function () {
         plusSlides(1);
     }, 4500);
