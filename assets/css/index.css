@@ -5,6 +5,7 @@
 body {
     background-color: #f0ebe6;
     margin: 0px;
+
 }
 
 header {
@@ -93,12 +94,13 @@ section img {
     margin-top: 20px;
     max-width: 100%;
     position: relative;
-    margin: auto;
+    margin: 0;
 
 }
 
 .singleSlide {
     display: none;
+    width: 100%;
 }
 
 .adphoto {
